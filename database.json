@@ -3,7 +3,7 @@
     "action_list": [
         {
             "name": "ligar",
-            "objetos": [
+            "target": [
                 "lâmpada",
                 "televisão",
                 "ar condicionado"
@@ -11,7 +11,7 @@
         },
         {
             "name": "desligar",
-            "objetos": [
+            "target": [
                 "lâmpada",
                 "televisão",
                 "ar condicionado"
@@ -19,7 +19,7 @@
         },
         {
             "name": "aumentar",
-            "objetos": [
+            "target": [
                 "luminosidade",
                 "volume",
                 "temperatura"
@@ -27,7 +27,7 @@
         },
         {
             "name": "diminuir",
-            "objetos": [
+            "target": [
                 "luminosidade",
                 "volume",
                 "temperatura"

@@ -106,16 +106,12 @@ def send_response(action,target):
     print()
     frase = f"ok vou executar o comando: {action} {target}"
     print(frase)
-    cria_audio(frase)
+    play_phrase(frase)
 
-#Funcao responsavel por falar 
-def cria_audio(audio):
+def play_phrase(audio):
     tts = gTTS(audio,lang='pt-br')
-    #Salva o arquivo de audio
-    tts.save('hello.mp3')
-    print("Estou aprendendo o que você disse...")
-    #Da play ao audio
-    playsound('hello.mp3')
+    tts.save('temp.mp3')
+    playsound('temp.mp3')
 
 if __name__ == "__main__":
     get_data_settings()
