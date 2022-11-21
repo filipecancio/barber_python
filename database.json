@@ -27,31 +27,9 @@
             "response": "Oi, sou a Barber. Deseja fazer algum atendimento? Basta dizer o meu nome e em seguida o comando."
         },
         {
-            "name": "desligar",
-            "target": [
-                "lâmpada",
-                "televisão",
-                "ar condicionado"
-            ],
-            "response":"depreciado"
-        },
-        {
-            "name": "aumentar",
-            "target": [
-                "luminosidade",
-                "volume",
-                "temperatura"
-            ],
-            "response":"depreciado"
-        },
-        {
-            "name": "diminuir",
-            "target": [
-                "luminosidade",
-                "volume",
-                "temperatura"
-            ],
-            "response":"depreciado"
+            "name": "nao",
+            "target": ["reproduzir"],
+            "response": ""
         }
     ]
 }

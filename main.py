@@ -83,7 +83,10 @@ def get_tokenized_command(phrase):
         token_phrase = remove_stop_word(token_phrase)
 
         if len(token_phrase) >= 3:
-            if asisstent_name == token_phrase[0].lower():
+            if asisstent_name != token_phrase[0].lower():
+                action = "nao"
+                target = "reproduzir"
+            else:
                 action = token_phrase[1].lower()
                 target = token_phrase[2].lower()
 
@@ -97,7 +100,6 @@ def run_command(action,target):
 
     if action and target:
         for item in action_list:
-            print(f'item: {item["name"]}')
             if action == item["name"]:
                 if target in item["target"]:
                     is_valid = True
@@ -108,8 +110,11 @@ def run_command(action,target):
     return is_valid,response
 
 def send_response(response):
-    print(response)
-    play_phrase(response)
+    if response == "":
+        pass
+    else:
+        print(response)
+        play_phrase(response)
 
 def play_phrase(audio):
     tts = gTTS(audio,lang='pt-br')
@@ -132,7 +137,10 @@ if __name__ == "__main__":
                 if is_valid:
                     send_response(response)
                 else:
-                    print("Não entendi o comando. Repita, por favor!")
+                    if action == None:
+                        print("audio processado sem a key barber. Ignorar.")
+                    else:
+                        send_response("Não entendi o comando. Repita, por favor!")
         except KeyboardInterrupt:
             print("Tchau!")
             is_alive = False
