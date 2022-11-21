@@ -30,6 +30,101 @@
             "name": "nao",
             "target": ["reproduzir"],
             "response": ""
+        },
+        {
+            "name": "disponibilidade",
+            "target": ["corte"],
+            "response": "sim! temos cortes disponiveis para hoje. Pedro atende das 7h às 19h, Carlos atende das 14h às 17h e josias das 16h às 20h."
+        },
+        {
+            "name": "quantos",
+            "target": ["clientes"],
+            "response": "Para saber quantos clientes faltam para determinado barbeiro, como por exemplo josias, diga: 'barber, josias fila'. Para saber quais são os nomes dos nossos barbeiros, diga: 'barber, barbeiros lista'"
+        },
+        {
+            "name": "clientes",
+            "target": ["faltam"],
+            "response": "Para saber quantos clientes faltam para determinado barbeiro, como por exemplo josias, diga: 'barber, josias fila'. Para saber quais são os nomes dos nossos barbeiros, diga: 'barber, lista de barbeiros'"
+        },
+        {
+            "name": "josias",
+            "target": ["fila"],
+            "response": "Josias não possui clientes na fila"
+        },
+        {
+            "name": "pedro",
+            "target": ["fila"],
+            "response": "Pedro possui dois clientes na fila"
+        },
+        {
+            "name": "carlos",
+            "target": ["fila"],
+            "response": "Carlos possui um cliente na fila"
+        },
+        {
+            "name": "barbeiros",
+            "target": ["listas"],
+            "response": "Nossos barbeiros são: Carlos, Josias e Pedro"
+        },
+        {
+            "name": "qual",
+            "target": ["horário"],
+            "response": "Atendemos de segunda à sexta das 7h à 20h. Pedro atende das 7h às 19h, Carlos atende das 14h às 17h e josias das 16h às 20h."
+        },
+        {
+            "name": "vocês",
+            "target": ["aceitam"],
+            "response": "Aceitamos débito, crédito, dinheiro e pix."
+        },
+        {
+            "name": "aceitam",
+            "target": ["pix","débito","crédito","dinheiro","cartão"],
+            "response": "Aceitamos débito, crédito, dinheiro e pix."
+        },
+        {
+            "name": "qual",
+            "target": ["tipos","tipo","corte","procedimento","estilo"],
+            "response": "Fazemos todos os tipos de cortes de cabelo. Dá uma olhada no nosso instagram e você poderá ter um catálogo completo de nossos serviços."
+        },
+        {
+            "name": "quais",
+            "target": ["tipos","tipo","corte","procedimento","estilo"],
+            "response": "Fazemos todos os tipos de cortes de cabelo. Dá uma olhada no nosso instagram e você poderá ter um catálogo completo de nossos serviços."
+        },
+        {
+            "name": "que",
+            "target": ["tipos","tipo","corte","procedimento","estilo"],
+            "response": "Fazemos todos os tipos de cortes de cabelo. Dá uma olhada no nosso instagram e você poderá ter um catálogo completo de nossos serviços."
+        },
+        {
+            "name": "tipo",
+            "target": ["cabelo","corte"],
+            "response": "Fazemos todos os tipos de cortes de cabelo. Dá uma olhada no nosso instagram e você poderá ter um catálogo completo de nossos serviços."
+        },
+        {
+            "name": "vendem",
+            "target": ["água","refrigerante","produtos","salgadinho"],
+            "response": "Temos um freezer com refigerantes e água. Basta escolher um e pegar, o valor será debitado ao pagamento do corte."
+        },
+        {
+            "name": "posso",
+            "target": ["agendar","agenda"],
+            "response": "Para agendar, basta dizer por exemplo: 'Barber, agendar com josias'. Para saber quais são os nomes dos nossos barbeiros, diga: 'barber, lista de barbeiros'."
+        },
+        {
+            "name": "quero",
+            "target": ["agendar","agenda"],
+            "response": "Para agendar, basta dizer por exemplo: 'Barber, agendar com josias'. Para saber quais são os nomes dos nossos barbeiros, diga: 'barber, lista de barbeiros'."
+        },
+        {
+            "name": "agendar",
+            "target": ["josias","pedro","carlos"],
+            "response": "Agendamento feito com sucesso!"
+        },
+        {
+            "name": "agenda",
+            "target": ["josias","pedro","carlos"],
+            "response": "Agendamento feito com sucesso!"
         }
     ]
 }

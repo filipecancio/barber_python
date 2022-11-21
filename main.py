@@ -101,6 +101,7 @@ def run_command(action,target):
     if action and target:
         for item in action_list:
             if action == item["name"]:
+                print(f'{item["name"]}: {item["target"]}')
                 if target in item["target"]:
                     is_valid = True
                     response = item["response"]
