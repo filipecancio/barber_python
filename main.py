@@ -78,6 +78,7 @@ def get_tokenized_command(phrase):
     target = None
 
     token_phrase = word_tokenize(phrase, 'portuguese')
+
     if token_phrase:
         token_phrase = remove_stop_word(token_phrase)
 
@@ -92,21 +93,23 @@ def run_command(action,target):
     global action_list
 
     is_valid = False
+    response = None
 
     if action and target:
         for item in action_list:
+            print(f'item: {item["name"]}')
             if action == item["name"]:
                 if target in item["target"]:
                     is_valid = True
+                    response = item["response"]
+
                 break
 
-    return is_valid
+    return is_valid,response
 
-def send_response(action,target):
-    print()
-    frase = f"ok vou executar o comando: {action} {target}"
-    print(frase)
-    play_phrase(frase)
+def send_response(response):
+    print(response)
+    play_phrase(response)
 
 def play_phrase(audio):
     tts = gTTS(audio,lang='pt-br')
@@ -124,13 +127,12 @@ if __name__ == "__main__":
             print(f"processando o comando: {command}")
 
             if command:
-                acao, objeto = get_tokenized_command(command)
-                valido = run_command(acao, objeto)
-                if valido:
-                    send_response(acao, objeto)
+                action, target = get_tokenized_command(command)
+                is_valid, response = run_command(action, target)
+                if is_valid:
+                    send_response(response)
                 else:
                     print("Não entendi o comando. Repita, por favor!")
         except KeyboardInterrupt:
             print("Tchau!")
-
-            continuar = False
+            is_alive = False

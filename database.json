@@ -2,12 +2,29 @@
     "name": "barbie",
     "action_list": [
         {
-            "name": "ligar",
-            "target": [
-                "lâmpada",
-                "televisão",
-                "ar condicionado"
-            ]
+            "name": "bom",
+            "target": ["dia"],
+            "response": "Oi, sou a Barber. Deseja fazer algum atendimento? Basta dizer o meu nome e em seguida o comando."
+        },
+        {
+            "name": "boa",
+            "target": ["tarde","noite"],
+            "response": "Oi, sou a Barber. Deseja fazer algum atendimento? Basta dizer o meu nome e em seguida o comando."
+        },
+        {
+            "name": "saudações",
+            "target": [""],
+            "response": "Oi, sou a Barber. Deseja fazer algum atendimento? Basta dizer o meu nome e em seguida o comando."
+        },
+        {
+            "name": "olá",
+            "target": [""],
+            "response": "Oi, sou a Barber. Deseja fazer algum atendimento? Basta dizer o meu nome e em seguida o comando."
+        },
+        {
+            "name": "tudo",
+            "target": ["bom","bem"],
+            "response": "Oi, sou a Barber. Deseja fazer algum atendimento? Basta dizer o meu nome e em seguida o comando."
         },
         {
             "name": "desligar",
@@ -15,7 +32,8 @@
                 "lâmpada",
                 "televisão",
                 "ar condicionado"
-            ]
+            ],
+            "response":"depreciado"
         },
         {
             "name": "aumentar",
@@ -23,7 +41,8 @@
                 "luminosidade",
                 "volume",
                 "temperatura"
-            ]
+            ],
+            "response":"depreciado"
         },
         {
             "name": "diminuir",
@@ -31,7 +50,8 @@
                 "luminosidade",
                 "volume",
                 "temperatura"
-            ]
+            ],
+            "response":"depreciado"
         }
     ]
 }
