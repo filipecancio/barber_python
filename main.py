@@ -1,4 +1,6 @@
 import speech_recognition as sr
+from gtts import gTTS
+from playsound import playsound
 from nltk import word_tokenize, corpus
 import json
 import nltk
@@ -32,7 +34,8 @@ def hear_voice():
     with sr.Microphone() as source:
         microphone.adjust_for_ambient_noise(source)
 
-        print("Diga alguma coisa: ")
+        frase = 'Diga alguma coisa: '
+        print(frase)
         audio = microphone.listen(source, timeout=5, phrase_time_limit=5)
         
         try:
@@ -100,10 +103,19 @@ def run_command(action,target):
     return is_valid
 
 def send_response(action,target):
-    print("ok vou executar o comando:", action,target)
+    print()
+    frase = f"ok vou executar o comando: {action} {target}"
+    print(frase)
+    cria_audio(frase)
 
-
-
+#Funcao responsavel por falar 
+def cria_audio(audio):
+    tts = gTTS(audio,lang='pt-br')
+    #Salva o arquivo de audio
+    tts.save('hello.mp3')
+    print("Estou aprendendo o que você disse...")
+    #Da play ao audio
+    playsound('hello.mp3')
 
 if __name__ == "__main__":
     get_data_settings()
