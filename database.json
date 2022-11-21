@@ -1,0 +1,37 @@
+{
+    "name": "barbie",
+    "action_list": [
+        {
+            "name": "ligar",
+            "objetos": [
+                "lâmpada",
+                "televisão",
+                "ar condicionado"
+            ]
+        },
+        {
+            "name": "desligar",
+            "objetos": [
+                "lâmpada",
+                "televisão",
+                "ar condicionado"
+            ]
+        },
+        {
+            "name": "aumentar",
+            "objetos": [
+                "luminosidade",
+                "volume",
+                "temperatura"
+            ]
+        },
+        {
+            "name": "diminuir",
+            "objetos": [
+                "luminosidade",
+                "volume",
+                "temperatura"
+            ]
+        }
+    ]
+}
