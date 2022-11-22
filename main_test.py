@@ -99,7 +99,7 @@ class TesteFila(unittest.TestCase):
         action, target = get_tokenized_command(phrase)
         is_valid,response = run_command(action, target)
 
-        self.assertTrue(response == "Para saber quantos clientes faltam para determinado barbeiro, como por exemplo josias, diga: 'barber, josias fila'. Para saber quais são os nomes dos nossos barbeiros, diga: 'barber, lista de barbeiros'")
+        self.assertTrue(response == "Para saber quantos clientes faltam para determinado barbeiro, como por exemplo josias, diga: 'barber, josias fila'. Para saber quais são os nomes dos nossos barbeiros, diga: 'barber, barbeiros lista'")
         
 class TesteHorario(unittest.TestCase):
 
